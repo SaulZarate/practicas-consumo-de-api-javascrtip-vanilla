@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <title>The Lord of the Rings | Peliculas</title>
+    <!-- Icon -->
+    <link rel="icon" href="../resources/Anillo_de_poder.jpg">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- Spinner -->
+    <link rel="stylesheet" href="assets/spinner.css">
+
+    <style>
+        #content_peliculas {
+            display: none;
+        }
+
+        #nav__container__a {
+            height: 50px;
+        }
+
+        #nav__container__a img {
+            height: 100%;
+            border-radius: 50%;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-light bg-light shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html" id="nav__container__a">
+                <img src="../resources/Anillo_de_poder.jpg" alt="anillo de poder">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Otras Apis </a>
+                            
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">The Lord of the Rings</a></li>
+                            <li><a class="dropdown-item" href="./rickAndMorty.html">Rick and Morty</a></li>
+                            <li><a class="dropdown-item" href="./digimon.html">Digimon</a></li>
+                            <li><a class="dropdown-item" href="./harryPotter.html">Harry Potter</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="my-4 container">
+
+        <!-- Spinner -->
+        <div id="content_spinner" class="sk-fading-circle">
+            <div class="sk-circle1 sk-circle"></div>
+            <div class="sk-circle2 sk-circle"></div>
+            <div class="sk-circle3 sk-circle"></div>
+            <div class="sk-circle4 sk-circle"></div>
+            <div class="sk-circle5 sk-circle"></div>
+            <div class="sk-circle6 sk-circle"></div>
+            <div class="sk-circle7 sk-circle"></div>
+            <div class="sk-circle8 sk-circle"></div>
+            <div class="sk-circle9 sk-circle"></div>
+            <div class="sk-circle10 sk-circle"></div>
+            <div class="sk-circle11 sk-circle"></div>
+            <div class="sk-circle12 sk-circle"></div>
+        </div>
+
+        <!-- Peliculas -->
+        <div id="content_peliculas"></div>
+
+    </main>
+
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <!-- My JavaScript -->
+    <script src="../assets/javascript/theLordOfTheRings.js"></script>
+
+</body>
+
+</html>
