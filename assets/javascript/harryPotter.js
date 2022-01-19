@@ -1,42 +1,36 @@
-const URL = 'http://hp-api.herokuapp.com/api/characters'
+const URL = 'http://hp-api.herokuapp.com/api/characters-'
 
 window.addEventListener('DOMContentLoaded', () =>{
 
     const div_content = document.getElementById('content_harryPotter')
     const tag_h1 = document.getElementById('title_harryPotter')
 
-    let charactersInHTML = ""
+    // Find data in local storage
     let data = getDataLocalStorage()
-    
     if(data == null){
         console.log('No hay datos guardados en el local storage')
         fetch(URL)
         .then( res => res.json())
         .then( data => {
-            // Create HTML Of characters
-            data.forEach( character => {
-                charactersInHTML += createHTML_character(character)
-            })
-            // Add to HTML
-            div_content.innerHTML = charactersInHTML
+            // Create HTML Of characters and Add to HTML
+            div_content.innerHTML = createHTML_characters(data)
             // Save to local storage
             saveDate(data)
             // Set title
             tag_h1.textContent = 'Harry Potter'
         })
         .catch( err => {
-            // Set title
-            tag_h1.textContent = 'Error :('
             console.log(err)
+            // Set title
+            tag_h1.textContent = 'Harry Potter'
+
+            // Create HTML Of characters and Add to HTML
+            div_content.innerHTML = createHTML_characters(dataApi)
         })
     }else{
         
-        // Create HTML Of characters
-        data.forEach( character => {
-            charactersInHTML += createHTML_character(character)
-        })
-        // Add to HTML
-        div_content.innerHTML = charactersInHTML
+        // Create HTML Of characters and Add to HTML
+        div_content.innerHTML = createHTML_characters(data)
         // Set title
         tag_h1.textContent = 'Harry Potter'
     }
@@ -59,6 +53,14 @@ function saveDate(characters){
         characters
     }
     localStorage.setItem('charactersHarryPotter', JSON.stringify(data))
+}
+
+function createHTML_characters(characters){
+    let charactersHTML = ''
+    characters.forEach( character => {
+        charactersHTML += createHTML_character(character)
+    })
+    return charactersHTML
 }
 
 function createHTML_character(character){
